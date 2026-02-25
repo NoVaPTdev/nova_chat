@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt" style="background-color: transparent !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>NOVA Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: transparent !important;">
+
+    <!-- ============ CHAT CONTAINER ============ -->
+    <div id="chatContainer" class="chat-container">
+        <!-- Messages Area -->
+        <div class="messages-wrapper">
+            <div class="messages-fade-top"></div>
+            <div class="messages-list" id="messagesList"></div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area" id="inputArea" style="display:none;">
+            <!-- Command Suggestions -->
+            <div class="suggestions-dropdown" id="suggestionsDropdown" style="display:none;"></div>
+
+            <form id="chatForm" class="input-form" autocomplete="off">
+                <div class="input-bar" id="inputBar">
+                    <span class="command-prefix" id="commandPrefix" style="display:none;"></span>
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Escrever mensagem..."
+                        maxlength="256"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <button type="submit" class="send-btn" id="sendBtn" disabled>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-progress" id="inputProgress"></div>
+            </form>
+
+            <div class="input-footer">
+                <span>Pressione ESC para fechar</span>
+                <span id="charCount">0/256</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js?v=3"></script>
+</body>
+</html>
